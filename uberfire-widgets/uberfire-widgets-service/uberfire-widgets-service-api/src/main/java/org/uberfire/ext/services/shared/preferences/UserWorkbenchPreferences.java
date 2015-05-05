@@ -14,7 +14,7 @@ public class UserWorkbenchPreferences extends UserPreference {
     public UserWorkbenchPreferences() {
     }
 
-    public UserWorkbenchPreferences( String language ) {
+    public UserWorkbenchPreferences(String language) {
         super();
         super.type = UserPreferencesType.WORKBENCHSETTINGS;
         super.preferenceKey = "settings";
@@ -34,11 +34,15 @@ public class UserWorkbenchPreferences extends UserPreference {
         return language;
     }
 
+    public void setLanguage( String language ) {
+        this.language = language;
+    }
+
     public String getViewMode( String perspective ) {
         return perspectiveViewMode.get( perspective );
     }
 
-    public void setViewMode( String perspective , String ViewMode ) {
-        perspectiveViewMode.put( perspective , ViewMode );
+    public void setViewMode( String perspective, String ViewMode ) {
+        perspectiveViewMode.put( perspective, ViewMode );
     }
 }
